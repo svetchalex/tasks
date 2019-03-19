@@ -38,8 +38,14 @@ class Url implements UrlInterface
      */
     public function getQueryParams()
     {
+        $query_param = [];
         $query = parse_url($this->http, PHP_URL_QUERY);
-        return explode('&', $query);
+        $query = explode('&', $query);
+        foreach ($query as $item) {
+            $arr = explode('=', $item);
+            $query_param[$arr[0]] = $arr[1];
+        }
+        return $query_param;
     }
 
     /**
@@ -50,19 +56,17 @@ class Url implements UrlInterface
      */
     public function getQueryParam($key, $value = null)
     {
-        $query_param = [];
         $query = $this->getQueryParams();
-        foreach ($query as $item) {
-            $arr = explode('=', $item);
-            $query_param[$arr[0]] = $arr[1];
-        }
-        if (array_key_exists($key, $query_param)) {
-            $value = $query_param[$key];
+        if (array_key_exists($key, $query)) {
+            $value = $query[$key];
         }
         return $value;
     }
 }
 
+/**
+ * Interface UrlInterface
+ */
 interface UrlInterface
 {
     public function getScheme();
@@ -79,6 +83,15 @@ interface UrlInterface
      */
     public function getQueryParam($key, $value = null);
 }
+
+$url = new Url('http://yandex.ru?key=value&key2=value2');
+$url->getScheme();
+$url->getHost();
+$url->getQueryParams();
+$url->getQueryParam('key');
+$url->getQueryParam('key2', 'lala');
+$url->getQueryParam('new', 'ehu');
+
 
 
 

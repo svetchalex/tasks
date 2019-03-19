@@ -44,4 +44,7 @@ class SquaresGenerator
     }
 }
 
+$square = new Square(10);
+$square->getSide();
+$squares = SquaresGenerator::generate(3, 2);
 
