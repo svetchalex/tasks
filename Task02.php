@@ -6,7 +6,8 @@
 class Random
 {
     private $seed;
-    public static $hold;
+    private $hold;
+
 
     /**
      * Random constructor.
@@ -16,8 +17,7 @@ class Random
     public function __construct($seed)
     {
         $this->seed = $seed;
-
-        self::$hold = $this->seed;
+        $this->hold = $seed;
     }
 
 
@@ -39,7 +39,7 @@ class Random
     public function reset()
     {
 
-        $this->seed = self::$hold;
+        $this->seed = $this->hold;
         return $this->seed;
     }
 }
