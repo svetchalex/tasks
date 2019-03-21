@@ -1,7 +1,7 @@
 <?php
 /**
  * 1. Добавлена проверка данных на входе и выходе методов, а так же в конструкторе
- * 2. Добавлелны комментарии
+ * 2. Добавлены комментарии
  * 3. Интерфейс выведен в отдельный файл
  * 4. Вычисление компонентов URL вынесено в конструктор
  */
@@ -44,7 +44,7 @@ class Url implements UrlInterface
 
     /**
      * @return mixed
-     * Метод возвращает компонент  scheme в веденном URL
+     * Метод возвращает компонент  scheme в введенном URL
      */
     public function getScheme(): string
     {
@@ -53,7 +53,7 @@ class Url implements UrlInterface
 
     /**
      * @return mixed
-     * Метод возвращает компонент host в веденном URL
+     * Метод возвращает компонент host в введенном URL
      */
     public function getHost(): string
     {
@@ -62,7 +62,7 @@ class Url implements UrlInterface
 
     /**
      * @return array
-     * Метод возвращает массив с параметрами веденного URL
+     * Метод возвращает массив с параметрами введенного URL
      */
     public function getQueryParams(): array
     {
