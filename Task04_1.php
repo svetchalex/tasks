@@ -4,6 +4,7 @@
  * отрицательное значение
  * 2. Добавлены комментарии
  * 3. Класс SquaresGenerator выведен в отдельный файл
+ * 4. Дополнительная проверка в классе SquaresGenerator в методе generate на отрицательное значение
  */
 declare(strict_types=1);
 require_once('Task04_2.php');
