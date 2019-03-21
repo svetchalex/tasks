@@ -6,7 +6,7 @@
  * 3. Класс SquaresGenerator выведен в отдельный файл
  */
 declare(strict_types=1);
-
+require_once('Task04_2.php');
 /**
  * Class Square
  * Класс описания квадратов

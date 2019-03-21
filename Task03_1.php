@@ -1,12 +1,12 @@
 <?php
 /**
- * 1. Добавлена проверка данных на входе и выходе методов, а так же в конструкторе
+ * 1. Добавлена проверка данных на входе и выходе методов, а так же в конструкторе на наличие URL-адреса в строке
  * 2. Добавлены комментарии
  * 3. Интерфейс выведен в отдельный файл
  * 4. Вычисление компонентов URL вынесено в конструктор
  */
 declare(strict_types=1);
-
+require_once('Task03_2.php');
 /**
  *
  * Class Url
@@ -78,7 +78,7 @@ class Url implements UrlInterface
      * Метод проверяет наличие заданного параметра $key в  URL  и возвращает его значение по ключу, если заданного
      * ключа - нет, возвращает новое значение, указанное в $value.
      */
-    public function getQueryParam($key, $value = null): string
+    public function getQueryParam(string $key, ?string $value = null): ?string
     {
 
         if (array_key_exists($key, $this->params)) {
