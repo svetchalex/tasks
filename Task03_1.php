@@ -44,7 +44,7 @@ class Url implements UrlInterface
 
     /**
      * @return mixed
-     * Метод возвращает компонент  scheme в введенном URL
+     * Метод возвращает компонент scheme введенного URL
      */
     public function getScheme(): string
     {
@@ -53,7 +53,7 @@ class Url implements UrlInterface
 
     /**
      * @return mixed
-     * Метод возвращает компонент host в введенном URL
+     * Метод возвращает компонент host введенного URL
      */
     public function getHost(): string
     {
