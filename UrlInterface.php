@@ -14,8 +14,8 @@ interface UrlInterface
     public function getQueryParams();
 
     /**
-     * @param      $key
-     * @param null $value
+     * @param string      $key
+     * @param string|null $value
      *
      * @return mixed
      */

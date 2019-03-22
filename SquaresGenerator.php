@@ -8,12 +8,13 @@ declare(strict_types=1);
 class SquaresGenerator
 {
     /**
+     * Метод возвращает массив из $cnt квадратов со стороной $side
+     *
      * @param $side
      * @param $cnt
      *
      * @return array
      * @throws Exception
-     * Метод возвращает массив из $cnt квадратов со стороной $side
      */
     public static function generate(float $side, int $cnt): array
     {

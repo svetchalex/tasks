@@ -6,7 +6,7 @@
  * 4. Вычисление компонентов URL вынесено в конструктор
  */
 declare(strict_types=1);
-require_once('Task03_2.php');
+require_once('UrlInterface.php');
 
 /**
  *
@@ -44,8 +44,9 @@ class Url implements UrlInterface
     }
 
     /**
-     * @return mixed
      * Метод возвращает компонент scheme введенного URL
+     *
+     * @return mixed
      */
     public function getScheme(): string
     {
@@ -53,8 +54,9 @@ class Url implements UrlInterface
     }
 
     /**
-     * @return mixed
      * Метод возвращает компонент host введенного URL
+     *
+     * @return mixed
      */
     public function getHost(): string
     {
@@ -62,8 +64,9 @@ class Url implements UrlInterface
     }
 
     /**
-     * @return array
      * Метод возвращает массив с параметрами введенного URL
+     *
+     * @return array
      */
     public function getQueryParams(): array
     {
@@ -72,12 +75,13 @@ class Url implements UrlInterface
     }
 
     /**
-     * @param      $key
-     * @param null $value
-     *
-     * @return mixed|null
      * Метод проверяет наличие заданного параметра $key в  URL  и возвращает его значение по ключу, если заданного
      * ключа - нет, возвращает новое значение, указанное в $value.
+     *
+     * @param string      $key
+     * @param string|null $value
+     *
+     * @return mixed|null
      */
     public function getQueryParam(string $key, ?string $value = null): ?string
     {

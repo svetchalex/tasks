@@ -7,7 +7,7 @@
  * 4. Дополнительная проверка в классе SquaresGenerator в методе generate на отрицательное значение
  */
 declare(strict_types=1);
-require_once('Task04_2.php');
+require_once('SquaresGenerator.php');
 
 /**
  * Class Square
@@ -34,8 +34,9 @@ class Square
     }
 
     /**
+     * Метод, возвращающий значение стороны
+     *
      * @return float
-     * Метод, возвращающий значение стороны.
      */
     public function getSide(): float
     {

@@ -32,8 +32,9 @@ class Circle
     }
 
     /**
-     * @return float|int
      * Метод вычисляет длину окружности
+     *
+     * @return float|int
      */
     public function getArea(): float
     {
@@ -42,8 +43,9 @@ class Circle
     }
 
     /**
-     * @return float|int
      * Метод вычисляет площадь окружности
+     *
+     * @return float|int
      */
     public function getCircumference(): float
     {

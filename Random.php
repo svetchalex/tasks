@@ -36,8 +36,9 @@ class Random
 
 
     /**
-     * @return float
      * Метод, возврающающий новое случайное число
+     *
+     * @return float
      */
     public function getNext(): float
     {
@@ -46,8 +47,9 @@ class Random
     }
 
     /**
-     * @return mixed
      * Метод, сбрасывающий генератор на начальное значение
+     *
+     * @return mixed
      */
     public function reset(): float
     {
